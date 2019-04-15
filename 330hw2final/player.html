@@ -1,0 +1,59 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</header>
+<body>
+   <div id="screen">
+      <div class="head-bar">
+         <a href="songs.html"><div class="back-button"><i class="material-icons">arrow_back</i></div></a>
+      </div>
+
+   <img src="images/currents.jpg" alt="Currents Album Cover" class="player-album-art"/>
+   <div> 
+      <p id="player-song-name" >The Less I Know The Better</p>
+      <p class="player-song-info"><i><em>Currents</em></i> - Tame Impala</p>
+   </div>
+   <input type="range" value="0" min="0" max="180" id="process-bar">
+   <table>
+   <td>
+   <div id="time-elapsed">0:00</div>
+   </td>
+   <td>
+   <div id="time-total">3:00</div>
+   </td>
+</table>
+   <div class="player-controls">
+      <button onclick="prevSong()"><i class="material-icons" >skip_previous</i></button>
+      <button onclick="switchPlay()"><i id="switch" class="material-icons">play_arrow</i></button>
+      <button onclick="nextSong()"><i class="material-icons">skip_next
+      </i></button>
+   </div>
+   <table>
+      <div>
+      <td>
+      <div class="volume-bar"><i class="material-icons">volume_down</i></div>
+      </td>
+      <td>
+      <div id="vl0"class="volume-level"></div>
+      <div id="vl1"class="volume-level"></div>
+      <div id="vl2"class="volume-level"></div>
+      <div id="vl3"class="volume-level"></div>
+      <div id="vl4"class="volume-level"></div>
+      <div id="vl5"class="volume-level"></div>
+      </td>
+      </div>
+   </table>
+      <button class="volume-rocker" onclick="volDown()" id="p1" onmousedown="mouseDown1()" onmouseup="mouseUp1()">&mdash;</button>
+      <button class="volume-rocker" onclick="volUp()" id="p2" onmousedown="mouseDown2()" onmouseup="mouseUp2()">+</button>
+
+   
+</div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
